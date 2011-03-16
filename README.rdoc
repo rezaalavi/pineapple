@@ -1,0 +1,42 @@
+= Pineapple
+
+* https://github.com/rezaalavi/pineapple
+
+== Description:
+
+Pineapple is a test engine solution for *Mobile Websites*. With Pineapple, the acceptance tests run in the device without any simulator.
+
+
+<tt>{what is a *Mobile Website?*}[http://en.wikipedia.org/wiki/Mobile_Web] </tt>
+
+
+== Features:
+
+* Nothing installed on the device
+* Nice jquery language to write your
+* possible to use with Cucumber
+
+== Get Started:
+
+(in progress...)
+
+== How it works
+
+TODO
+
+== What Pineapple isn't:
+
+* mechanize
+* web driver
+* browser emmulator 
+
+== Supported Devices:
+
+Pineapple basically supports any device that can run JavaScript. 
+We could say any 'high-end' devicesi, such as iPhone, iPad, Android (including tablets), Windows Mobiles, Blackberry (to be confirmed).
+
+
+
+== Links
+* {Mobile Websites definition}[http://en.wikipedia.org/wiki/Mobile_Web]
+* {W3C Mobile Web Application Best Practices}[http://www.w3.org/TR/mwabp/]
