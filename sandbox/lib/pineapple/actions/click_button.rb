@@ -1,5 +1,6 @@
 module Actions
   def click_button selector
-    @script += "$('#{selector}').trigger('click');\n"
+    find_item selector
+    @script += "pineapple_item.trigger('click');\n"
   end
 end

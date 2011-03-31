@@ -1,5 +1,6 @@
 module Actions
   def click_link selector
-    @script += "clickLink($('#{selector}').get(0));\n"
+    find_item selector
+    @script += "clickLink(pineapple_item.get(0));\n"
   end
 end

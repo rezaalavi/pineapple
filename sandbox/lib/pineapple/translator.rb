@@ -1,4 +1,5 @@
 require "pineapple/actions"
+require "pineapple/utils/global_selector"
 
 class PineappleTranslator
   include Actions
