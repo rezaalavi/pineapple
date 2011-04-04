@@ -1,5 +1,5 @@
 require "pineapple/actions"
-require "pineapple/utils/global_selector"
+require "pineapple/utils"
 
 class PineappleTranslator
   include Actions
@@ -7,13 +7,11 @@ class PineappleTranslator
   attr_accessor :next_s, :script
   
   def initialize(current_step)
-    @script= ""
-    @next_step
+    @script= ""   
     @file_name = "#{Rails.root}/pineapple/steps/#{current_step}"
     @step_body = load_step
-
-
   end
+  
   def translate
     instance_eval @step_body, @file_name
   end
