@@ -1,5 +1,6 @@
 require "pineapple/actions"
 require "pineapple/utils"
+require 'open-uri'
 
 class PineappleTranslator
   include Actions
@@ -7,8 +8,14 @@ class PineappleTranslator
   attr_accessor :next_s, :script
   
   def initialize(current_step)
-    @script= ""   
-    @file_name = "#{Rails.root}/pineapple/steps/#{current_step}"
+    @script= ""
+
+    steps_root_path = ENV['PINEAPPLE_STEPS_PATH']
+    if steps_root_path.nil? || steps_root_path.empty?
+      steps_root_path = "#{Rails.root}/pineapple/steps/"
+    end
+    
+    @file_name = "#{steps_root_path}#{current_step}"
     @step_body = load_step
   end
   
@@ -19,7 +26,7 @@ class PineappleTranslator
   private
 
   def load_step 
-    file = File.open(@file_name, "r")
+    file = open(@file_name, "r")
     file.read
   end
 
