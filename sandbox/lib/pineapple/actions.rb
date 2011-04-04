@@ -7,5 +7,6 @@ require "pineapple/actions/fill_in"
 require "pineapple/actions/check"
 require "pineapple/actions/uncheck"
 require "pineapple/actions/choose"
+require "pineapple/actions/select"
 
 
