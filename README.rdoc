@@ -15,7 +15,7 @@ With Pineapple, the acceptance tests run in the device without any simulator.
 
 == Get Started:
 
-(in progress...)
+(in progress....)
 
 == How it works
 
