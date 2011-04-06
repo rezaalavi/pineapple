@@ -5,10 +5,10 @@ module Actions
     
     @script += <<SCRIPT
     
-    if (pineapple_item.is('a') ) {
-      clickLink(pineapple_item.get(0));      
+    if (pineappleVars.item.is('a') ) {
+      clickLink(pineappleVars.item.get(0));
     }else{
-      pineapple_item.trigger('click');
+      pineappleVars.item.trigger('click');
     }
 SCRIPT
     

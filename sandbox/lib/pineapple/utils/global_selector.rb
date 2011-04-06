@@ -3,20 +3,16 @@ module Actions
   def find_item selector
     
         @script += <<SCRIPT
-    var pineapple_item = $("##{selector}");
-    
-    if(typeof pineapple_item.get(0) == "undefined"){     
-      pineapple_item = $("input[name='#{selector}']");
-      if(typeof pineapple_item.get(0) == "undefined"){     
-        pineapple_item = $(":contains('#{selector}')");
+    var pineappleVars.item = $("##{selector}");    
+    if(typeof pineappleVars.item.get(0) == "undefined"){
+      pineappleVars.item = $("input[name='#{selector}']");
+      if(typeof pineappleVars.item.get(0) == "undefined"){
+        pineappleVars.item = $(":contains('#{selector}')");
       } 
-      if(typeof pineapple_item.get(0) == "undefined"){     
-        pineapple_item = $("#{selector}");
-      } 
-      
-    }
-      
-    
+      if(typeof pineappleVars.item.get(0) == "undefined"){
+        pineappleVars.item = $("#{selector}");
+      }       
+    }    
 SCRIPT
     
     
