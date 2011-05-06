@@ -1,6 +1,18 @@
 var pineappleVars= {
-currentStep = 1;
+currentStep : 1
 };
+var urlParams = {};
+(function () {
+    var e,
+        a = /\+/g,  // Regex for replacing addition symbol with a space
+        r = /([^&=]+)=?([^&]*)/g,
+        d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+        q = window.location.search.substring(1);
+
+    while (e = r.exec(q))
+       urlParams[d(e[1])] = d(e[2]);
+})();
+
 function clickLink(link) {
    var cancelled = false;
 
@@ -22,6 +34,12 @@ function clickLink(link) {
 }
 
 $(document).ready(function() {
-    $.getScript("<%=  pineapple_script %>");
+  init= urlParams["initp"]
+  if (typeof init == "undefined"){
+    $.getScript("<%=  pineapple_steps_engine_path %>");
+    }
+  else {
+  $.getScript("<%=  pineapple_steps_engine_path%>?init="+init);
+  }
  });
 
