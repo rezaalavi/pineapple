@@ -1,3 +1,4 @@
+jQuery.noConflict();
 var pineappleVars= {
 currentStep : 1
 };
@@ -33,13 +34,13 @@ function clickLink(link) {
    }
 }
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
   init= urlParams["initp"]
   if (typeof init == "undefined"){
-    $.getScript("<%=  pineapple_steps_engine_path %>");
+    jQuery.getScript("<%=  pineapple_steps_engine_path %>");
     }
   else {
-  $.getScript("<%=  pineapple_steps_engine_path%>?init="+init);
+  jQuery.getScript("<%=  pineapple_steps_engine_path%>?init="+init);
   }
  });
 
