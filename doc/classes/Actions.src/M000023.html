@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>find_item (Actions)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/generators/pineapple/templates/lib/pineapple/utils/global_selector.rb, line 3</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_item</span> <span class="ruby-identifier">selector</span>
+    
+        <span class="ruby-ivar">@script</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;    var pineappleVars.item = jQuery(\&quot;#\#{selector}\&quot;);\n    if(typeof pineappleVars.item.get(0) == \&quot;undefined\&quot;){\n      pineappleVars.item = jQuery(\&quot;input[name='\#{selector}']\&quot;);\n      if(typeof pineappleVars.item.get(0) == \&quot;undefined\&quot;){\n        pineappleVars.item = jQuery(\&quot;:contains('\#{selector}')\&quot;);\n      } \n      if(typeof pineappleVars.item.get(0) == \&quot;undefined\&quot;){\n        pineappleVars.item = jQuery(\&quot;\#{selector}\&quot;);\n      }       \n    }    \n&quot;</span>
+    
+    
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
