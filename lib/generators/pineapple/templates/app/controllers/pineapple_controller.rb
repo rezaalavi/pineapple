@@ -17,7 +17,7 @@ class PineappleController < ApplicationController
       translator = PineappleTranslator.new(current_step)
       translator.translate
       session[:next_step] = translator.next_s
-      puts "next step = #{translator.next_s}"
+      
       render :inline => translator.script
     else
       render :inline => ""

@@ -34,13 +34,7 @@ function clickLink(link) {
    }
 }
 
-jQuery(document).ready(function() {
-  init= urlParams["initp"]
-  if (typeof init == "undefined"){
-    jQuery.getScript("<%=  pineapple_steps_engine_path %>");
-    }
-  else {
-  jQuery.getScript("<%=  pineapple_steps_engine_path%>?init="+init);
-  }
+jQuery(document).ready(function() { 
+   <%=  action_script  %>;   
  });
 

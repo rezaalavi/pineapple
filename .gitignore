@@ -3,3 +3,5 @@
 sandbox/.redcar/tags
 sandbox/nbproject
 sandbox/vendor/bundle
+pkg
+nbproject

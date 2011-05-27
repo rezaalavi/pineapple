@@ -1,6 +1,6 @@
 = Pineapple
 
-* https://github.com/rezaalavi/pineapple
+* http://github.com/rezaalavi/pineapple
 
 == Description:
 
