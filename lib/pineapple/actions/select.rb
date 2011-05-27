@@ -2,6 +2,6 @@ module Actions
   def select value, option
     selector = option[:from]
     find_item selector
-    @script += "pineappleVars.item.val('#{value}');\n"
+    jscript "pineappleVars.item.val('#{value}');"
   end
 end

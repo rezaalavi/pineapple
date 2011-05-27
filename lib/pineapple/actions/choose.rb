@@ -1,6 +1,6 @@
 module Actions
   def choose selector
     find_item selector
-    @script += "pineappleVars.item.get(1).click();\n"
+    jscript "pineappleVars.item.get(1).click();"
   end
 end
