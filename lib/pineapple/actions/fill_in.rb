@@ -2,6 +2,6 @@ module Actions
   def fill_in selector, option
     value = option[:with]
     find_item selector
-    jscript "pineappleVars.item.val('#{value}');"
+    @script += "pineappleVars.item.val('#{value}');\n"
   end
 end

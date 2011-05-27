@@ -1,6 +1,6 @@
 module Actions
   def visit url
-    jscript "window.location.href = \"#{url}\";"
+    @script += "window.location.href = \"#{url}\";\n"
   end
 end
 

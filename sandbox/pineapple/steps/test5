@@ -1,0 +1,1 @@
+click_on("tr:nth-child(2) td:nth-child(3) a")

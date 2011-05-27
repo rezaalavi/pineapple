@@ -2,7 +2,7 @@ require "pineapple/translator"
 
 class PineappleController < ApplicationController
   
-  def show 
+  def show    
     render :layout => false
   end
 
