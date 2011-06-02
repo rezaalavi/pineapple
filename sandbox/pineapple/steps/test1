@@ -1,3 +1,0 @@
-fill_in "#fruit_name", :with=>"pineapple"
-visit "../fruits/"
-next_step "test2"

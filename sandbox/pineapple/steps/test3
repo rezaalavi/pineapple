@@ -1,4 +1,0 @@
-click_link("tr:nth-child(2) td:nth-child(3) a")
-next_step "test4"
-
-

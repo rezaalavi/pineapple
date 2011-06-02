@@ -2,7 +2,7 @@ require "pineapple/translator"
 
 class PineappleController < ApplicationController
   
-  def show    
+  def show 
     render :layout => false
   end
 
@@ -14,7 +14,9 @@ class PineappleController < ApplicationController
       current_step = params['init']
     end
     unless current_step.nil?
-      translator = PineappleTranslator.new(current_step)
+      pineapple_step = PineappleStep.find_by_name current_step
+      step_body = pineapple_step.body
+      translator = PineappleTranslator.new(step_body)
       translator.translate
       session[:next_step] = translator.next_s
       puts "next step = #{translator.next_s}"

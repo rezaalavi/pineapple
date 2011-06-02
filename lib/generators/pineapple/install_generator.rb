@@ -24,7 +24,10 @@ module Pineapple
 	def copy_files
 		directory "app"		
 	end
-	
+
+  def setup_db
+    generate("model", "pineapple_step name:string body:text")
+  end
 
   end
 end

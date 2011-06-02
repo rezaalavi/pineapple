@@ -7,20 +7,15 @@ class PineappleTranslator
   
   attr_accessor :next_s, :script
   
-  def initialize(current_step)
+  def initialize(step_body)
     @script= ""
 
-    steps_root_path = ENV['PINEAPPLE_STEPS_PATH']
-    if steps_root_path.nil? || steps_root_path.empty?
-      steps_root_path = "#{Rails.root}/pineapple/steps/"
-    end
     
-    @file_name = "#{steps_root_path}#{current_step}"
-    @step_body = load_step
+    @step_body = step_body
   end
   
   def translate
-    instance_eval @step_body, @file_name
+    instance_eval @step_body
   end
 
   private
