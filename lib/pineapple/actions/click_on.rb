@@ -6,7 +6,8 @@ module Actions
     @script += <<SCRIPT
     
     if (pineappleVars.item.is('a') ) {
-      clickLink(pineappleVars.item.get(0));
+
+      clickLink(pineappleVars.item[pineappleVars.item.size()-1]);
     }else{
       pineappleVars.item.trigger('click');
     }

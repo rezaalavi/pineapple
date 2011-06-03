@@ -7,7 +7,7 @@ require 'rake/testtask'
 
 spec = Gem::Specification.new do |s|
   s.name = 'pineapple'
-  s.version = '1.1.0'
+  s.version = '1.1.1'
   s.has_rdoc = true
   s.homepage = 'http://github.com/rezaalavi/pineapple'
   s.extra_rdoc_files = ['README.rdoc', 'LICENSE']
