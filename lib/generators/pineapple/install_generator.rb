@@ -17,8 +17,10 @@ module Pineapple
     # Generator Code. Remember this is just suped-up Thor so methods are executed in order
 
 	def setup_routes	
-		route('match "/pineapple" => "pineapple#steps", :as => :pineapple_steps_engine')
+		route('resources :pineapple_steps')
+    route('match "/pineapple" => "pineapple#steps", :as => :pineapple_steps_engine')
 		route('match "/pineapple.js" => "pineapple#show", :as => :pineapple_engine')
+    
 	end
 	
 	def copy_files
